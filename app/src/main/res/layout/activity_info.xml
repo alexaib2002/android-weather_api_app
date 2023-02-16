@@ -33,13 +33,13 @@
         android:id="@+id/tempTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/ph_temp"
         android:textColor="@color/design_default_color_on_primary"
         android:textSize="@dimen/temp_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconIv" />
+        app:layout_constraintTop_toBottomOf="@+id/hourTv" />
 
     <TextView
         android:id="@+id/humTitleTv"
@@ -105,4 +105,15 @@
         app:layout_constraintStart_toEndOf="@+id/tempTv"
         app:layout_constraintTop_toTopOf="@+id/tempTv"
         app:srcCompat="@drawable/degree" />
+
+    <TextView
+        android:id="@+id/hourTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="00:00"
+        android:textColor="@color/design_default_color_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconIv" />
 </androidx.constraintlayout.widget.ConstraintLayout>
