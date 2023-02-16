@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="check_weather_btn">Consultar tiempo</string>
+    <string name="lat_input_hint">Latitud</string>
+    <string name="lon_input_hint">Longitud</string>
+    <string name="ph_location">Europe/Madrid</string>
+    <string name="ph_temp">0</string>
+    <string name="humidity_txt">HUMEDAD</string>
+    <string name="rain_txt">LLUVIA</string>
+    <string name="ph_percentage">0%</string>
+    <string name="ph_summary">Soleado</string>
+</resources>

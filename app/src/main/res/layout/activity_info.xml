@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/welcome_bg"
+    tools:context=".InfoActivity">
+
+    <TextView
+        android:id="@+id/locationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/ph_location"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="@dimen/header_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="@dimen/weather_icon_size"
+        android:layout_height="@dimen/weather_icon_size"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTv"
+        app:srcCompat="@drawable/clear_day" />
+
+    <TextView
+        android:id="@+id/tempTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/ph_temp"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="@dimen/temp_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconIv" />
+
+    <TextView
+        android:id="@+id/humTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/humidity_txt"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textSize="@dimen/summary_font_size"
+        app:layout_constraintEnd_toStartOf="@+id/tempTv"
+        app:layout_constraintTop_toBottomOf="@+id/tempTv" />
+
+    <TextView
+        android:id="@+id/rainTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rain_txt"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textSize="@dimen/summary_font_size"
+        app:layout_constraintStart_toEndOf="@+id/tempTv"
+        app:layout_constraintTop_toTopOf="@+id/humTitleTv" />
+
+    <TextView
+        android:id="@+id/humTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/ph_percentage"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="@dimen/summary_font_size"
+        app:layout_constraintEnd_toEndOf="@+id/humTitleTv"
+        app:layout_constraintStart_toStartOf="@+id/humTitleTv"
+        app:layout_constraintTop_toBottomOf="@+id/humTitleTv" />
+
+    <TextView
+        android:id="@+id/rainTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ph_percentage"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="@dimen/summary_font_size"
+        app:layout_constraintEnd_toEndOf="@+id/rainTitleTv"
+        app:layout_constraintStart_toStartOf="@+id/rainTitleTv"
+        app:layout_constraintTop_toTopOf="@+id/humTv" />
+
+    <TextView
+        android:id="@+id/summaryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ph_summary"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="@dimen/summary_font_size"
+        app:layout_constraintEnd_toEndOf="@+id/rainTv"
+        app:layout_constraintStart_toStartOf="@+id/humTv"
+        app:layout_constraintTop_toBottomOf="@+id/humTv" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tempTv"
+        app:layout_constraintTop_toTopOf="@+id/tempTv"
+        app:srcCompat="@drawable/degree" />
+</androidx.constraintlayout.widget.ConstraintLayout>
