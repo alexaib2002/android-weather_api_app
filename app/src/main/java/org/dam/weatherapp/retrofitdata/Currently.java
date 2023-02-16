@@ -37,8 +37,8 @@ public class Currently {
         return icon;
     }
 
-    public Double getTemperature() {
-        return temperature;
+    public Double getTemperatureCelsius() {
+        return (temperature - 32) * 5 / 9;
     }
 
     public Double getHumidity() {

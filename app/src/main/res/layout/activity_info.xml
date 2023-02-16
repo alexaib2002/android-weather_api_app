@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/infoLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/welcome_bg"
@@ -45,12 +46,13 @@
         android:id="@+id/humTitleTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/humidity_txt"
         android:textColor="@color/material_dynamic_neutral90"
         android:textSize="@dimen/summary_font_size"
-        app:layout_constraintEnd_toStartOf="@+id/tempTv"
-        app:layout_constraintTop_toBottomOf="@+id/tempTv" />
+        app:layout_constraintBottom_toTopOf="@+id/humTv"
+        app:layout_constraintEnd_toStartOf="@+id/rainTitleTv"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/rainTitleTv"
@@ -59,20 +61,21 @@
         android:text="@string/rain_txt"
         android:textColor="@color/material_dynamic_neutral90"
         android:textSize="@dimen/summary_font_size"
-        app:layout_constraintStart_toEndOf="@+id/tempTv"
-        app:layout_constraintTop_toTopOf="@+id/humTitleTv" />
+        app:layout_constraintBottom_toBottomOf="@+id/humTitleTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/humTitleTv" />
 
     <TextView
         android:id="@+id/humTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/ph_percentage"
         android:textColor="@color/design_default_color_background"
         android:textSize="@dimen/summary_font_size"
+        app:layout_constraintBottom_toTopOf="@+id/summaryTv"
         app:layout_constraintEnd_toEndOf="@+id/humTitleTv"
-        app:layout_constraintStart_toStartOf="@+id/humTitleTv"
-        app:layout_constraintTop_toBottomOf="@+id/humTitleTv" />
+        app:layout_constraintStart_toStartOf="@+id/humTitleTv" />
 
     <TextView
         android:id="@+id/rainTv"
@@ -81,21 +84,21 @@
         android:text="@string/ph_percentage"
         android:textColor="@color/design_default_color_background"
         android:textSize="@dimen/summary_font_size"
+        app:layout_constraintBottom_toBottomOf="@+id/humTv"
         app:layout_constraintEnd_toEndOf="@+id/rainTitleTv"
-        app:layout_constraintStart_toStartOf="@+id/rainTitleTv"
-        app:layout_constraintTop_toTopOf="@+id/humTv" />
+        app:layout_constraintStart_toStartOf="@+id/rainTitleTv" />
 
     <TextView
         android:id="@+id/summaryTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/ph_summary"
         android:textColor="@color/design_default_color_background"
         android:textSize="@dimen/summary_font_size"
-        app:layout_constraintEnd_toEndOf="@+id/rainTv"
-        app:layout_constraintStart_toStartOf="@+id/humTv"
-        app:layout_constraintTop_toBottomOf="@+id/humTv" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -113,6 +116,7 @@
         android:layout_marginTop="16dp"
         android:text="00:00"
         android:textColor="@color/design_default_color_background"
+        android:textSize="@dimen/summary_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iconIv" />
